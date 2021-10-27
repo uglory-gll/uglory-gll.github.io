@@ -877,7 +877,8 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
-  background-color: #fff;
+  background-color: rgba(10,10,10,0.02);
+  cursor: url("//cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.1.6/images/mouse.cur"), auto;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   font-size: 1.4rem;
   line-height: 1.7;
@@ -1957,55 +1958,4 @@ pre .javascript .function {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-}
-.navbar {
-  position: relative;
-  padding-top: 3rem;
-  text-align: center;
-}
-.navbar .nav {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-.navbar .nav .nav-item-link {
-  display: block;
-  padding: 1rem;
-  color: #172d3e;
-  text-decoration: none;
-  cursor: pointer;
-}
-.navbar .nav .nav-item-link:hover {
-  color: #1594c6;
-}
-.navbar .nav.nav-main .nav-item-link::before,
-.navbar .nav.nav-main .nav-item-link i.fe {
-  display: block;
-  line-height: 1;
-}
-.navbar .nav.nav-main .nav-item-link::before {
-  font-family: 'feathericon';
-}
-.navbar .nav.nav-main .nav-item:nth-child(1) .nav-item-link::before {
-  content: '\f12f';
-}
-.navbar .nav.nav-main .nav-item:nth-child(2) .nav-item-link::before {
-  content: '\f12a';
-}
-.navbar .nav.nav-main .nav-item:nth-child(3) .nav-item-link::before {
-  content: '\f1a9';
-}
-.navbar .nav.nav-main .nav-item:nth-child(4) .nav-item-link::before {
-  content: '\f174';
-}
-.navbar-bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.logo {
-  text-align: center;
-}
-.logo img {
-  width: 4.8rem;
 }
