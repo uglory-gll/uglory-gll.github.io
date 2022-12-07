@@ -1,0 +1,390 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>星辰</title><meta name="keywords" content="网络安全 软件工程 渗透测试 python"><meta name="author" content="uglory"><meta name="copyright" content="uglory"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本科 | 软件工程 | 网络安全">
+<meta property="og:type" content="website">
+<meta property="og:title" content="星辰">
+<meta property="og:url" content="http://www.gll365.top/page/2/index.html">
+<meta property="og:site_name" content="星辰">
+<meta property="og:description" content="本科 | 软件工程 | 网络安全">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.gll365.top/img/%E5%A4%B4%E5%83%8F.jpg">
+<meta property="article:author" content="uglory">
+<meta property="article:tag" content="网络安全 软件工程 渗透测试 python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.gll365.top/img/%E5%A4%B4%E5%83%8F.jpg"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="http://www.gll365.top/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '星辰',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-12-07 21:20:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/index.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">星辰</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">星辰</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/18/2%E3%80%81CTF-Web%E4%B8%8D%E9%9C%80%E8%A6%81%E4%BB%A3%E7%A0%81%E7%9F%A5%E8%AF%86/" title="不需要代码知识"><img class="post_bg" src="/img/9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不需要代码知识"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/18/2%E3%80%81CTF-Web%E4%B8%8D%E9%9C%80%E8%A6%81%E4%BB%A3%E7%A0%81%E7%9F%A5%E8%AF%86/" title="不需要代码知识">不需要代码知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-18T07:31:42.000Z" title="发表于 2022-09-18 15:31:42">2022-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CTF/">CTF</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/CTF/Web/">Web</a></span></div><div class="content">BUUCTF极客大挑战2019(EasySQL)直接万能密码
+
+ACTF2020 新生赛(Include)文件不在显示部分，可能在注释部分，用到文件包含漏洞，知识点php:&#x2F;&#x2F;filter可以获取指定文件源码。当其与文件包含函数结合时，php:&#x2F;&#x2F;filter流会被当作php文件执行。所以我们一般对其进行编码，阻止其不执行，从而读取任意文件源代码格式：xxx.php?xxx&#x3D;php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;xxx.php
+
+ACTF2020 新生赛(Exec)
+很明显可能存在命令注入漏洞，用;结束前面的语句，然后后面进行自己的代码
+强网杯 2019(随便注)过滤了关键字，我们可以用堆叠查询，同时用show tables,show columns from table_name，这里学到一个新知识点，表名为数字时，要用反引号包起来查询
+payload:0’;rename table words to word1;rename tabl ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/09/16/2%E3%80%81CTF-Web%E9%9C%80%E8%A6%81%E4%BB%A3%E7%A0%81%E7%9F%A5%E8%AF%86/" title="需要代码知识"><img class="post_bg" src="/img/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="需要代码知识"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/16/2%E3%80%81CTF-Web%E9%9C%80%E8%A6%81%E4%BB%A3%E7%A0%81%E7%9F%A5%E8%AF%86/" title="需要代码知识">需要代码知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-16T13:39:07.000Z" title="发表于 2022-09-16 21:39:07">2022-09-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CTF/">CTF</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/CTF/Web/">Web</a></span></div><div class="content">BUUCTFHCTF 2018(WarmUp)
+源代码给出提示去这个文件夹进行代码审计
+mb_strpos(总串，子串) 查找字符串在另一个字符串中首次出现的位置
+URL要编码2次因为传入会自动解码一次
+极客大挑战 2019(Havefun)看源代码直接传参
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/16/1%E3%80%81%E7%AC%AC%E4%BA%8C%E5%91%A8/" title="第二周-文档编辑技巧"><img class="post_bg" src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二周-文档编辑技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/16/1%E3%80%81%E7%AC%AC%E4%BA%8C%E5%91%A8/" title="第二周-文档编辑技巧">第二周-文档编辑技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-16T08:41:26.000Z" title="发表于 2022-09-16 16:41:26">2022-09-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/">网络安全系统学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/%E5%AE%89%E5%85%A8%E4%BA%BA%E5%91%98%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/">安全人员基本技能</a></span></div><div class="content">培养感觉
+知乎
+先知社区
+freebuf
+t00ls
+paper
+
+OfficeExcel功能
+自定义功能区：右键打开自定义功能区
+功能区折叠和展开：双击或右键折叠功能区，打开功能区
+设置背景：文件-&gt;选项可以进行背景设置
+设置密码：另存为-&gt;工具-&gt;设置密码
+所有列变窄：先全选，再把一列变窄
+百分比：开始选项-&gt;数字
+分数：0 1&#x2F;5表示1&#x2F;5，数字格式设置成分数也可以(开始选项-&gt;数字)
+超过15位变成科学计数法问题：调成文本(开始-&gt;数字-&gt;文本)或者在数字最前面加个逗号
+清除格式等：开始-&gt;编辑-&gt;清除
+打印网格线：文件-&gt;打印-&gt;页面设置-&gt;工作表
+网格线：页面布局-&gt;网格线
+显示#####：可能是宽度不够，可以双击右侧
+单元格中自定义中的@代表单元格的内容，[颜色]表示颜色设置
+单元格匹配(精准匹配单元格只含有)：ctrl+f-&gt;选项-&gt;单元格匹配
+
+快捷键
+另存为：F12
+快速填充：ctrl+e
+现在的日期：ctrl+;
+现在的时间：ctrl+shift+;
+单元 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/09/16/1%E3%80%81%E7%AC%AC%E4%B8%80%E5%91%A8/" title="第一周-科学的环境"><img class="post_bg" src="/img/10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一周-科学的环境"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/16/1%E3%80%81%E7%AC%AC%E4%B8%80%E5%91%A8/" title="第一周-科学的环境">第一周-科学的环境</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-16T05:51:00.000Z" title="发表于 2022-09-16 13:51:00">2022-09-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/">网络安全系统学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/%E5%AE%89%E5%85%A8%E4%BA%BA%E5%91%98%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/">安全人员基本技能</a></span></div><div class="content">电脑安装系统
+制作U盘启动盘
+
+设置bios(基本输入输出系统)由U盘启动，各个厂商启动键不同
+
+
+
+找到U盘选项确定
+
+按F10保存，并重新启动电脑
+
+安装操作系统镜像，拷贝到U盘启动盘
+
+
+点击是重启电脑，关机瞬间拔掉U盘启动盘，然后等待开机就行了
+
+
+虚拟机安装操作系统vmware
+去官网下载vmware warkstation pro，然后傻瓜式安装就行了
+
+下载一个镜像
+
+
+可以选择之后导入镜像
+
+安装vmtool可以从外面拖文件到虚拟机
+
+然后配置网络(NAT，桥接，仅主机)
+
+
+virtual box
+去官网下载安装virtual box，然后傻瓜式安装
+
+设置默认虚拟电脑位置
+
+下载镜像
+
+
+可以先选系统，在导入镜像
+
+继续安装
+
+配置网络(NAT，桥接模式，仅主机模式)
+
+
+Google语法
+and
+or
+“关键词”不分割关键词
+“google -program”没有program
++只包含
+~差不多也可以
+“g*gle”还有?表示通配符
+intitle标题
+intext正文
+inanchor锚点
+site域名
+inurl url
+link链接到某个url的列表
+ca ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/16/0%E3%80%81hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="hexo博客搭建"><img class="post_bg" src="/img/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo博客搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/16/0%E3%80%81hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="hexo博客搭建">hexo博客搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-16T03:38:48.000Z" title="发表于 2022-09-16 11:38:48">2022-09-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a></span></div><div class="content">
+安装node.js，用node -v,npm -v进行检测是否安装成功
+
+安装git，用git –version进行检测是否安装成功
+
+安装hexo，npm install hexo-cli -g，hexo -v检测是否安装成功
+
+去github建立一个仓库
+
+这里可以改名
+
+
+
+
+新建一个仓库
+
+
+这两个名字一定要相等
+
+
+
+
+
+
+看看ssh是否安装过，默认是安装过得
+
+接下来输入ssh-keygen -t  rsa -C “邮件地址”，然后一直回车
+
+C:\Users\Administrator\.ssh这里有ssh的文件,打开这个文件
+
+复制里面内容，去github，点击setting，头像那里，再找到ssh
+
+
+然后看看是否安装成功
+ssh -T &#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#111;&#109;，yes
+
+
+在要写博客的文件夹
+
+hexo init#初始化，报错可能是github国外网不稳定的原因
+然后这里已经多了很多内容
+
+hexo s#生成可以访问的本地页面
+这 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">uglory</div><div class="author-info__description">本科 | 软件工程 | 网络安全</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/uglory-gll"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/04/4%E3%80%81%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E2%80%94%E2%80%94day5/" title="php基础"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="php基础"/></a><div class="content"><a class="title" href="/2022/12/04/4%E3%80%81%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E2%80%94%E2%80%94day5/" title="php基础">php基础</a><time datetime="2022-12-04T10:01:38.000Z" title="发表于 2022-12-04 18:01:38">2022-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/04/4%E3%80%81%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E2%80%94%E2%80%94day4/" title="html div css博客项目"><img src="/img/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="html div css博客项目"/></a><div class="content"><a class="title" href="/2022/12/04/4%E3%80%81%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E2%80%94%E2%80%94day4/" title="html div css博客项目">html div css博客项目</a><time datetime="2022-12-04T10:01:29.000Z" title="发表于 2022-12-04 18:01:29">2022-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/04/4%E3%80%81%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E2%80%94%E2%80%94day3/" title="javascript基础"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="javascript基础"/></a><div class="content"><a class="title" href="/2022/12/04/4%E3%80%81%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E2%80%94%E2%80%94day3/" title="javascript基础">javascript基础</a><time datetime="2022-12-04T10:01:19.000Z" title="发表于 2022-12-04 18:01:19">2022-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/04/4%E3%80%81%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E2%80%94%E2%80%94day2/" title="div css基础"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="div css基础"/></a><div class="content"><a class="title" href="/2022/12/04/4%E3%80%81%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%E2%80%94%E2%80%94day2/" title="div css基础">div css基础</a><time datetime="2022-12-04T10:00:58.000Z" title="发表于 2022-12-04 18:00:58">2022-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/03/0%E3%80%81git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="0、git的使用"><img src="/img/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="0、git的使用"/></a><div class="content"><a class="title" href="/2022/12/03/0%E3%80%81git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="0、git的使用">0、git的使用</a><time datetime="2022-12-03T13:37:29.000Z" title="发表于 2022-12-03 21:37:29">2022-12-03</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CTF/"><span class="card-category-list-name">CTF</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CTF/Web/"><span class="card-category-list-name">Web</span><span class="card-category-list-count">2</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">小知识</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91/"><span class="card-category-list-name">开发</span><span class="card-category-list-count">3</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">微信小程序</span><span class="card-category-list-count">3</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">网络安全系统学习</span><span class="card-category-list-count">8</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/Nday%E8%AE%AD%E7%BB%83%E8%90%A5/"><span class="card-category-list-name">Nday训练营</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/%E5%AE%89%E5%85%A8%E4%BA%BA%E5%91%98%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/"><span class="card-category-list-name">安全人员基本技能</span><span class="card-category-list-count">2</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/CTF/" style="font-size: 1.23em; color: #999ea6">CTF</a> <a href="/tags/nday/" style="font-size: 1.1em; color: #999">nday</a> <a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 1.23em; color: #999ea6">小知识</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 1.37em; color: #99a4b2">开发</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.5em; color: #99a9bf">网络安全</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">5</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">9.3k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-12-07T13:20:14.600Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/index.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By uglory</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    window.typed = new Typed("#subtitle", {
+      strings: ["人生的上半场打不好没关系，还有下半场","每个优秀的人，背后都有一段沉默的时光","你若将过去抱得太紧，怎么能腾出手来拥抱现在？","不去努力争取，那你连失败的资格都没有！"],
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '人生的上半场打不好没关系，还有下半场'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div><div class="aplayer no-destroy" data-id="7770163723" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
