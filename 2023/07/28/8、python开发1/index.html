@@ -1,0 +1,437 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>函数和模块 | 星辰</title><meta name="keywords" content="python开发"><meta name="author" content="uglory"><meta name="copyright" content="uglory"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一些函数str.replace(“abc”,”**”)# 替换abc为** 函数名.__name__ # 获取函数名 函数名.__doc__ # 获取函数注释 文件操作字符串类型：在程序中用于表示文字信息，本质上是unicode编码中的二进制 字节类型：可表示文字信息，本质上是utf-8&#x2F;gbk等编码的二进制。也可表示原始二进制(图片，文件等信息) 读文件1.打开文件(rb,表示读取文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数和模块">
+<meta property="og:url" content="http://www.gll365.top/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%911/index.html">
+<meta property="og:site_name" content="星辰">
+<meta property="og:description" content="一些函数str.replace(“abc”,”**”)# 替换abc为** 函数名.__name__ # 获取函数名 函数名.__doc__ # 获取函数注释 文件操作字符串类型：在程序中用于表示文字信息，本质上是unicode编码中的二进制 字节类型：可表示文字信息，本质上是utf-8&#x2F;gbk等编码的二进制。也可表示原始二进制(图片，文件等信息) 读文件1.打开文件(rb,表示读取文件">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.gll365.top/img/5.jpg">
+<meta property="article:published_time" content="2023-07-28T14:04:39.000Z">
+<meta property="article:modified_time" content="2023-09-30T00:50:59.859Z">
+<meta property="article:author" content="uglory">
+<meta property="article:tag" content="python开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.gll365.top/img/5.jpg"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="http://www.gll365.top/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%911/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '函数和模块',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-30 08:50:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">107</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/5.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">星辰</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">函数和模块</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-28T14:04:39.000Z" title="发表于 2023-07-28 22:04:39">2023-07-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-30T00:50:59.859Z" title="更新于 2023-09-30 08:50:59">2023-09-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%BC%80%E5%8F%91/">开发</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%BC%80%E5%8F%91/python/">python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="函数和模块"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一些函数"><a href="#一些函数" class="headerlink" title="一些函数"></a>一些函数</h1><p>str.replace(“abc”,”**”)# 替换abc为**</p>
+<p>函数名.__name__ # 获取函数名</p>
+<p>函数名.__doc__ # 获取函数注释</p>
+<h1 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h1><p>字符串类型：在程序中用于表示文字信息，本质上是unicode编码中的二进制</p>
+<p>字节类型：可表示文字信息，本质上是utf-8&#x2F;gbk等编码的二进制。也可表示原始二进制(图片，文件等信息)</p>
+<h2 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h2><p>1.打开文件(rb,表示读取文件原始的二进制)</p>
+<p>file_object &#x3D; open(‘info.txt’,mode&#x3D;’rb’)</p>
+<p>2.读取文件</p>
+<p>data &#x3D; file_object.read()</p>
+<p>3.关闭文件</p>
+<p>file_object.close()</p>
+<p>print(data)</p>
+<p>4.直接读字符串内容</p>
+<p>text &#x3D; data.decode(“utf-8”)</p>
+<p>print(text)</p>
+<p>或者直接file_object &#x3D; open(‘info.txt’,mode&#x3D;’rt’,encoding&#x3D;’utf-8’)</p>
+<p>5.可以先判断文件路径是否存在</p>
+<p>exists &#x3D; os.path.exists(file_path)</p>
+<p>if exists:</p>
+<h2 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">file_object = open(&quot;t1.txt&quot;,mode=&#x27;wb&#x27;)</span><br><span class="line">file_object.write(&quot;一段文字&quot;,encode(&quot;utf-8&quot;))</span><br><span class="line">file_object.close()</span><br><span class="line">或者</span><br><span class="line">file_object = open(&quot;t1.txt&quot;,mode=&#x27;wt&#x27;,encoding=&#x27;utf-8&#x27;)</span><br><span class="line">file_object.write(&quot;一段文字&quot;)</span><br><span class="line">file_object.close()</span><br><span class="line">写图片等文件</span><br><span class="line">f1 = open(&#x27;a1.png&#x27;,mode=&#x27;rb&#x27;)</span><br><span class="line">content = f1.read()</span><br><span class="line">f1.close()</span><br><span class="line">f2 = open(&#x27;a2.png&#x27;,mode=&#x27;wb&#x27;)</span><br><span class="line">f2.write(content)</span><br><span class="line">f2.close()</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件打开模式"><a href="#文件打开模式" class="headerlink" title="文件打开模式"></a>文件打开模式</h2><ul>
+<li><p>只读：r、rt、rb</p>
+<p>存在，读</p>
+<p>不存在，报错</p>
+</li>
+<li><p>只写：w、wt、wb</p>
+<p>存在，清空再写</p>
+<p>不存在，创建再写</p>
+</li>
+<li><p>只写：x、xt、xb</p>
+<p>存在，报错</p>
+<p>不存在，创建再写</p>
+</li>
+<li><p>追加写：a、at、ab</p>
+<p>存在，尾部追加</p>
+<p>不存在，创建再写</p>
+</li>
+<li><p>读写：</p>
+<p>r+、rb+，起始位置</p>
+<p>w+、wb+，清空然后起始位置</p>
+<p>x+、xb+，新文件起始位置</p>
+<p>a+、ab+，末尾位置</p>
+</li>
+</ul>
+<p>data.seek(0)让光标回到开头</p>
+<h2 id="常见功能"><a href="#常见功能" class="headerlink" title="常见功能"></a>常见功能</h2><h3 id="读文件-1"><a href="#读文件-1" class="headerlink" title="读文件"></a>读文件</h3><p>f &#x3D; open(‘info.txt’,mode&#x3D;’rb’)</p>
+<p>f.read(1)读一个字节</p>
+<p>f &#x3D; open(‘info.txt’,mode&#x3D;’r’,encoding&#x3D;’utf-8’)</p>
+<p>f.read(1)读一个字符</p>
+<p>f.readline()读一行</p>
+<p>f.readlines()读所有行成一个列表</p>
+<p>循环读取</p>
+<p>for line in f:</p>
+<p>​	print(line.strip())</p>
+<h3 id="写文件-1"><a href="#写文件-1" class="headerlink" title="写文件"></a>写文件</h3><p>f.write(‘你好’)</p>
+<p>f.write(‘你好’.encoding(‘utf-8’))</p>
+<h3 id="flush刷到硬盘"><a href="#flush刷到硬盘" class="headerlink" title="flush刷到硬盘"></a>flush刷到硬盘</h3><p>f &#x3D; open(‘info.txt’,mode&#x3D;’wb’,encoding&#x3D;’utf-8’)</p>
+<p>while True:</p>
+<p>​	f.write(“你好”)</p>
+<p>f.close()</p>
+<p>不是所有内容都写到了硬盘，因为会先写到缓冲区</p>
+<h3 id="移动光标位置"><a href="#移动光标位置" class="headerlink" title="移动光标位置"></a>移动光标位置</h3><p>f &#x3D; open(‘info.txt’,mode&#x3D;’r+’,encoding&#x3D;’utf-8’)</p>
+<p>f.seek(3)</p>
+<p>f.write(‘你好呀’)</p>
+<p>f.close()</p>
+<p>如果info.txt里面是 你好 那么结果会变成 你你好呀，3个字节表示1个字符</p>
+<p>如果是a模式，永远会从末尾开始写入</p>
+<h3 id="获取当前光标位置"><a href="#获取当前光标位置" class="headerlink" title="获取当前光标位置"></a>获取当前光标位置</h3><p>f.tell()</p>
+<h2 id="with上下文管理"><a href="#with上下文管理" class="headerlink" title="with上下文管理"></a>with上下文管理</h2><p>with open(‘info.txt’,mode&#x3D;’rb’) as file_object:</p>
+<p>​	data &#x3D; file_object.read()</p>
+<p>​	print(data)</p>
+<h1 id="csv格式文件"><a href="#csv格式文件" class="headerlink" title="csv格式文件"></a>csv格式文件</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;files/mv.csv&#x27;</span>,mode=<span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file_object:</span><br><span class="line">	file_object.readline()</span><br><span class="line">	<span class="keyword">for</span> line <span class="keyword">in</span> file_object:</span><br><span class="line">		user_id,username,url = line.strip().split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">		res = request.get(</span><br><span class="line">			url = url,</span><br><span class="line">			header=&#123;</span><br><span class="line">				<span class="string">&quot;User-Agent&quot;</span>:<span class="string">&quot;&quot;</span></span><br><span class="line">			&#125;</span><br><span class="line">		)</span><br><span class="line">		<span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&quot;images&quot;</span>):</span><br><span class="line">			os.makedirs(<span class="string">&quot;images&quot;</span>)</span><br><span class="line">		<span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;images/&#123;&#125;.png&quot;</span>.<span class="built_in">format</span>(username),mode=<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> img_object:</span><br><span class="line">			img_object.write(res.content)</span><br></pre></td></tr></table></figure>
+
+<h1 id="ini格式文件"><a href="#ini格式文件" class="headerlink" title="ini格式文件"></a>ini格式文件</h1><ul>
+<li><p>读取所有节点</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> configparser</span><br><span class="line"></span><br><span class="line">config = configparser.ConfigParser()</span><br><span class="line">config.read(<span class="string">&#x27;files/my.ini&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">result = config.sections()</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>读取节点下的键值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> configparser</span><br><span class="line"></span><br><span class="line">config = configparser.ConfigParser()</span><br><span class="line">config.read(<span class="string">&#x27;files/my.ini&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">result = config.items(<span class="string">&quot;节点值&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> config.items(<span class="string">&quot;节点值&quot;</span>):</span><br><span class="line">    <span class="built_in">print</span>(key,value)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取某个节点下的键对应的值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> configparser</span><br><span class="line"></span><br><span class="line">config = configparser.ConfigParser()</span><br><span class="line">config.read(<span class="string">&#x27;files/my.ini&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">result = config.get(<span class="string">&quot;节点&quot;</span>,<span class="string">&quot;键&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> configparser</span><br><span class="line"></span><br><span class="line">config = configparser.ConfigParser()</span><br><span class="line">config.read(<span class="string">&#x27;files/my.ini&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="comment"># 是否存在某节点</span></span><br><span class="line">v1 = config.has_section(<span class="string">&quot;client&quot;</span>)</span><br><span class="line"><span class="comment"># 添加一个节点</span></span><br><span class="line">config.add_section(<span class="string">&quot;group&quot;</span>)</span><br><span class="line">config.write(<span class="built_in">open</span>(<span class="string">&#x27;files/my.ini&#x27;</span>,mode=<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line"><span class="comment"># 添加键值</span></span><br><span class="line">config.<span class="built_in">set</span>(<span class="string">&#x27;节点&#x27;</span>,<span class="string">&#x27;键&#x27;</span>,<span class="string">&#x27;值&#x27;</span>)</span><br><span class="line">config.write(<span class="built_in">open</span>(<span class="string">&#x27;files/my.ini&#x27;</span>,mode=<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line"><span class="comment"># 删除</span></span><br><span class="line">config.remove_section(<span class="string">&#x27;节点&#x27;</span>)</span><br><span class="line">config.remove_option(<span class="string">&#x27;节点&#x27;</span>,<span class="string">&#x27;键&#x27;</span>)</span><br><span class="line">config.write(<span class="built_in">open</span>(<span class="string">&#x27;files/my.ini&#x27;</span>,mode=<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="xml格式文件"><a href="#xml格式文件" class="headerlink" title="xml格式文件"></a>xml格式文件</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> xml.etree <span class="keyword">import</span> ElementTree <span class="keyword">as</span> ET</span><br><span class="line"></span><br><span class="line">tree = ET.parser(<span class="string">&quot;files/xo.xml&quot;</span>)</span><br><span class="line"><span class="comment"># 获取根标签</span></span><br><span class="line">root = tree.getroot()</span><br><span class="line"><span class="comment"># 如果是网络请求获取的xml根节点</span></span><br><span class="line">root = ET.XML(content)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> root:</span><br><span class="line">    <span class="built_in">print</span>(child.tag,child.attrib)</span><br><span class="line">    <span class="keyword">for</span> mode <span class="keyword">in</span> child:</span><br><span class="line">        <span class="built_in">print</span>(node.tag,node.attrib,node.text)</span><br><span class="line"><span class="comment"># 找某个标签</span></span><br><span class="line">rank = root.find(<span class="string">&#x27;root下的标签&#x27;</span>).find(<span class="string">&#x27;上一层找到的标签下继续找的标签&#x27;</span>)</span><br><span class="line"><span class="comment"># 修改某个节点</span></span><br><span class="line">rank.<span class="built_in">set</span>(<span class="string">&quot;属性&quot;</span>,<span class="string">&quot;值&quot;</span>)</span><br><span class="line">tree = ET.ElementTree(root)</span><br><span class="line">tree.write(<span class="string">&#x27;new.xml&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="comment"># 删除某个节点</span></span><br><span class="line">root.remove(root.find(<span class="string">&#x27;标签&#x27;</span>))</span><br><span class="line">tree = ET.ElementTree(root)</span><br><span class="line">tree.write(<span class="string">&#x27;new.xml&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个xml</span></span><br><span class="line">root = ET.Element(<span class="string">&quot;home&quot;</span>)</span><br><span class="line">son1 = ET.Element(<span class="string">&#x27;son&#x27;</span>,&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;儿1&#x27;</span>&#125;)</span><br><span class="line">son2 = ET.Element(<span class="string">&#x27;son&#x27;</span>,&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;儿2&#x27;</span>&#125;)</span><br><span class="line">grandson1 = ET.Element(<span class="string">&#x27;grandson&#x27;</span>,&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;儿1&#x27;</span>&#125;)</span><br><span class="line">grandson2 = ET.Element(<span class="string">&#x27;grandson&#x27;</span>,&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;儿2&#x27;</span>&#125;)</span><br><span class="line">son1.append(grandson1)</span><br><span class="line">son1.append(grandson2)</span><br><span class="line">root.append(son1)</span><br><span class="line">root.append(son2)</span><br><span class="line">tree = ET.ElementTree(root)</span><br><span class="line">tree.write(<span class="string">&#x27;files/oooo.xml&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>,short_enpty_elements=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个xml</span></span><br><span class="line">root = ET.Element(<span class="string">&#x27;family&#x27;</span>)</span><br><span class="line">son1 = ET.SubElement(root,<span class="string">&#x27;son&#x27;</span>,attrib=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;儿1&#x27;</span>&#125;)</span><br><span class="line">son2 = ET.SubElement(root,<span class="string">&#x27;son&#x27;</span>,attrib=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;儿2&#x27;</span>&#125;)</span><br><span class="line">grandson1 = ET.SubElement(son1,<span class="string">&#x27;age&#x27;</span>,attrib=&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;儿1&#x27;</span>&#125;)</span><br><span class="line">grandson1.text = <span class="string">&#x27;孙子&#x27;</span></span><br><span class="line">et = ET.ElementTree(root)</span><br><span class="line">et.write(<span class="string">&#x27;text.xml&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="excel文件"><a href="#excel文件" class="headerlink" title="excel文件"></a>excel文件</h1><ul>
+<li><p>读sheet</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取sheet名称</span></span><br><span class="line">wb = load_workbook(<span class="string">&quot;files/p1.xlsx&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(wb.sheetnames)</span><br><span class="line"><span class="comment"># 选择sheet，基于sheet名称</span></span><br><span class="line">sheet = wb[<span class="string">&quot;一个sheet名称&quot;</span>]</span><br><span class="line">cell = sheet.cell(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(cell.value)</span><br><span class="line"><span class="comment"># 选择sheet，基于索引位置</span></span><br><span class="line">sheet = wb.worksheets[<span class="number">0</span>]</span><br><span class="line">cell = sheet.cell(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(cell.value)</span><br><span class="line"><span class="comment"># 循环所有的sheet</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> wb.sheetnames:</span><br><span class="line">    sheet = wb[name]</span><br><span class="line">    cell = sheet.cell(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(cell.value)</span><br><span class="line"><span class="keyword">for</span> sheet <span class="keyword">in</span> wb.worksheets:</span><br><span class="line">    cell = sheet.cell(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(cell.value)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>读单元格</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c1 = sheet[<span class="string">&quot;A2&quot;</span>]</span><br><span class="line"><span class="built_in">print</span>(c1.value)</span><br><span class="line"></span><br><span class="line">c2 = sheet[<span class="string">&quot;D4&quot;</span>]</span><br><span class="line"><span class="built_in">print</span>(c2.value)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一行的所有数据</span></span><br><span class="line"><span class="keyword">for</span> cell <span class="keyword">in</span> sheet[<span class="number">1</span>]:</span><br><span class="line">    <span class="built_in">print</span>(cell.value)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一列的所有数据</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> sheet.rows:</span><br><span class="line">    <span class="built_in">print</span>(row[<span class="number">0</span>].value)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 第二行的所有数据</span></span><br><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> sheet.columns:</span><br><span class="line">    <span class="built_in">print</span>(col[<span class="number">1</span>].value)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>读合并单元格</p>
+<p>输出MergedCell内容为空</p>
+</li>
+<li><p>写sheet</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> workbook</span><br><span class="line"></span><br><span class="line">wb = workbook.Workbook()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改sheet名称</span></span><br><span class="line">sheet = wb.worksheets[<span class="number">0</span>]</span><br><span class="line">sheet.title = <span class="string">&quot;数据集&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建sheet并设置sheet颜色</span></span><br><span class="line">sheet = wb.create_sheet(<span class="string">&quot;工作计划&quot;</span>,<span class="number">0</span>)</span><br><span class="line">sheet.sheet_properties.tabColor = <span class="string">&quot;&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认打开的sheet</span></span><br><span class="line">wb.active = <span class="number">0</span></span><br><span class="line">wb.save(<span class="string">&#x27;p2.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拷贝sheet</span></span><br><span class="line">sheet = wb.create_sheet(<span class="string">&quot;工作计划&quot;</span>)</span><br><span class="line">sheet.sheet_properties.tabColor = <span class="string">&quot;&quot;</span></span><br><span class="line">new_sheet = wb.copy_worksheet(wb[<span class="string">&quot;Sheet&quot;</span>])</span><br><span class="line">new_sheet.title = <span class="string">&quot;新的计划&quot;</span></span><br><span class="line">wb.save(<span class="string">&#x27;p2.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除sheet</span></span><br><span class="line"><span class="keyword">del</span> wb[<span class="string">&#x27;用户列表&#x27;</span>]</span><br><span class="line">wb.save(<span class="string">&#x27;p2.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写单元格</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"></span><br><span class="line">wb = load_workbook(<span class="string">&#x27;files/p1.xlsx&#x27;</span>)</span><br><span class="line">sheet = wb.worksheets[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取某个单元格，修改值</span></span><br><span class="line">cell = sheeet.cell(<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">cell.value = <span class="string">&quot;修改后的值&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取某个单元格，修改值</span></span><br><span class="line">sheet[<span class="string">&quot;B3&quot;</span>] = <span class="string">&quot;Alex&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取某个单元格，修改值</span></span><br><span class="line">cell_list = sheet[<span class="string">&quot;B2&quot;</span>:<span class="string">&quot;C3&quot;</span>]</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> cell_list:</span><br><span class="line">    <span class="keyword">for</span> cell <span class="keyword">in</span> row:</span><br><span class="line">       cell.value = <span class="string">&quot;新的值&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对齐方式</span></span><br><span class="line">cell = sheet.cell(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment"># horizontal，水平方向对齐方式：&quot;general&quot;, &quot;left&quot;, &quot;center&quot;, &quot;right&quot;, &quot;fill&quot;, &quot;justify&quot;, &quot;centerContinuous&quot;, &quot;distributed&quot;</span></span><br><span class="line"><span class="comment"># vertical，垂直方向对齐方式：&quot;top&quot;, &quot;center&quot;, &quot;bottom&quot;, &quot;justify&quot;, &quot;distributed&quot;</span></span><br><span class="line"><span class="comment"># text_rotation，旋转角度。</span></span><br><span class="line"><span class="comment"># wrap_text，是否自动换行。</span></span><br><span class="line">cell.alignment = Alignment(horizontal=<span class="string">&#x27;center&#x27;</span>, vertical=<span class="string">&#x27;distributed&#x27;</span>, text_rotation=<span class="number">45</span>, wrap_text=<span class="literal">True</span>)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 边框</span></span><br><span class="line"><span class="comment"># side的style有如下：dashDot&#x27;,&#x27;dashDotDot&#x27;, &#x27;dashed&#x27;,&#x27;dotted&#x27;,&#x27;double&#x27;,&#x27;hair&#x27;, &#x27;medium&#x27;, &#x27;mediumDashDot&#x27;, &#x27;mediumDashDotDot&#x27;,&#x27;mediumDashed&#x27;, &#x27;slantDashDot&#x27;, &#x27;thick&#x27;, &#x27;thin&#x27;</span></span><br><span class="line">cell = sheet.cell(<span class="number">9</span>, <span class="number">2</span>)</span><br><span class="line">cell.border = Border(</span><br><span class="line">    top=Side(style=<span class="string">&quot;thin&quot;</span>, color=<span class="string">&quot;FFB6C1&quot;</span>), </span><br><span class="line">    bottom=Side(style=<span class="string">&quot;dashed&quot;</span>, color=<span class="string">&quot;FFB6C1&quot;</span>),</span><br><span class="line">    left=Side(style=<span class="string">&quot;dashed&quot;</span>, color=<span class="string">&quot;FFB6C1&quot;</span>),</span><br><span class="line">    right=Side(style=<span class="string">&quot;dashed&quot;</span>, color=<span class="string">&quot;9932CC&quot;</span>),</span><br><span class="line">    diagonal=Side(style=<span class="string">&quot;thin&quot;</span>, color=<span class="string">&quot;483D8B&quot;</span>),  <span class="comment"># 对角线</span></span><br><span class="line">    diagonalUp=<span class="literal">True</span>,  <span class="comment"># 左下 ~ 右上</span></span><br><span class="line">    diagonalDown=<span class="literal">True</span>  <span class="comment"># 左上 ~ 右下</span></span><br><span class="line">)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字体</span></span><br><span class="line">cell = sheet.cell(<span class="number">5</span>, <span class="number">1</span>)</span><br><span class="line">cell.font = Font(name=<span class="string">&quot;微软雅黑&quot;</span>, size=<span class="number">45</span>, color=<span class="string">&quot;ff0000&quot;</span>, underline=<span class="string">&quot;single&quot;</span>)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 背景色</span></span><br><span class="line">cell = sheet.cell(<span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line">cell.fill = PatternFill(<span class="string">&quot;solid&quot;</span>, fgColor=<span class="string">&quot;99ccff&quot;</span>)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 渐变背景色</span></span><br><span class="line">cell = sheet.cell(<span class="number">5</span>, <span class="number">5</span>)</span><br><span class="line">cell.fill = GradientFill(<span class="string">&quot;linear&quot;</span>, stop=(<span class="string">&quot;FFFFFF&quot;</span>, <span class="string">&quot;99ccff&quot;</span>, <span class="string">&quot;000000&quot;</span>))</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 宽高（索引从1开始）</span></span><br><span class="line">sheet.row_dimensions[<span class="number">1</span>].height = <span class="number">50</span></span><br><span class="line">sheet.column_dimensions[<span class="string">&quot;E&quot;</span>].width = <span class="number">100</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 合并单元格</span></span><br><span class="line">sheet.merge_cells(<span class="string">&quot;B2:D8&quot;</span>)</span><br><span class="line">sheet.merge_cells(start_row=<span class="number">15</span>, start_column=<span class="number">3</span>, end_row=<span class="number">18</span>, end_column=<span class="number">8</span>)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line">sheet.unmerge_cells(<span class="string">&quot;B2:D8&quot;</span>)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 写入公式</span></span><br><span class="line">sheet = wb.worksheets[<span class="number">3</span>]</span><br><span class="line">sheet[<span class="string">&quot;D1&quot;</span>] = <span class="string">&quot;合计&quot;</span></span><br><span class="line">sheet[<span class="string">&quot;D2&quot;</span>] = <span class="string">&quot;=B2*C2&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line">sheet = wb.worksheets[<span class="number">3</span>]</span><br><span class="line">sheet[<span class="string">&quot;D3&quot;</span>] = <span class="string">&quot;=SUM(B3,C3)&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除</span></span><br><span class="line"><span class="comment"># idx，要删除的索引位置</span></span><br><span class="line"><span class="comment"># amount，从索引位置开始要删除的个数（默认为1）</span></span><br><span class="line">sheet.delete_rows(idx=<span class="number">1</span>, amount=<span class="number">20</span>)</span><br><span class="line">sheet.delete_cols(idx=<span class="number">1</span>, amount=<span class="number">3</span>)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 插入</span></span><br><span class="line">sheet.insert_rows(idx=<span class="number">5</span>, amount=<span class="number">10</span>)</span><br><span class="line">sheet.insert_cols(idx=<span class="number">3</span>, amount=<span class="number">2</span>)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环写内容</span></span><br><span class="line">sheet = wb[<span class="string">&quot;Sheet&quot;</span>]</span><br><span class="line">cell_range = sheet[<span class="string">&#x27;A1:C2&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> cell_range:</span><br><span class="line">    <span class="keyword">for</span> cell <span class="keyword">in</span> row:</span><br><span class="line">        cell.value = <span class="string">&quot;xx&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> sheet.iter_rows(min_row=<span class="number">5</span>, min_col=<span class="number">1</span>, max_col=<span class="number">7</span>, max_row=<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> cell <span class="keyword">in</span> row:</span><br><span class="line">        cell.value = <span class="string">&quot;oo&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移动</span></span><br><span class="line"><span class="comment"># 将H2:J10范围的数据，向右移动15个位置、向上移动1个位置</span></span><br><span class="line">sheet.move_range(<span class="string">&quot;H2:J10&quot;</span>,rows=<span class="number">1</span>, cols=<span class="number">15</span>)</span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line">sheet = wb.worksheets[<span class="number">3</span>]</span><br><span class="line">sheet[<span class="string">&quot;D1&quot;</span>] = <span class="string">&quot;合计&quot;</span></span><br><span class="line">sheet[<span class="string">&quot;D2&quot;</span>] = <span class="string">&quot;=B2*C2&quot;</span></span><br><span class="line">sheet[<span class="string">&quot;D3&quot;</span>] = <span class="string">&quot;=SUM(B3,C3)&quot;</span></span><br><span class="line">sheet.move_range(<span class="string">&quot;B1:D3&quot;</span>,cols=<span class="number">10</span>, translate=<span class="literal">True</span>) <span class="comment"># 自动翻译公式</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印区域</span></span><br><span class="line">sheet.print_area = <span class="string">&quot;A1:D200&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印时，每个页面的固定表头</span></span><br><span class="line">sheet.print_title_cols = <span class="string">&quot;A:D&quot;</span></span><br><span class="line">sheet.print_title_rows = <span class="string">&quot;1:3&quot;</span></span><br><span class="line">wb.save(<span class="string">&quot;p2.xlsx&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="压缩文件"><a href="#压缩文件" class="headerlink" title="压缩文件"></a>压缩文件</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="comment"># base_name压缩后，root_dir要压缩的</span></span><br><span class="line">shutil.make_archive(base_name=<span class="string">r&#x27;D:\xxx\xxx\x1&#x27;</span>,<span class="built_in">format</span>=<span class="string">&#x27;zip&#x27;</span>,root_dir=<span class="string">r&#x27;D:\xxx\xx&#x27;</span>)</span><br><span class="line"><span class="comment"># filename要解压的，extract_dir解压路径</span></span><br><span class="line">shutil.unpack_archive(filename=<span class="string">r&#x27;data.zip&#x27;</span>,extract_dir=<span class="string">r&#x27;xxx&#x27;</span>,<span class="built_in">format</span>=<span class="string">&#x27;zip&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="文件和路径相关"><a href="#文件和路径相关" class="headerlink" title="文件和路径相关"></a>文件和路径相关</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="comment"># 当前文件所在的文件夹目录</span></span><br><span class="line">base_dir = os.path.dirname(os.path.abspath(__file__))</span><br><span class="line"><span class="comment"># 路径拼接</span></span><br><span class="line">file_path = os.path.join(base_dir,<span class="string">&#x27;files&#x27;</span>,<span class="string">&#x27;info.txt&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断路径是否存在</span></span><br><span class="line">exists = os.path.exists(p1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建文件夹</span></span><br><span class="line">os.makedirs(路径)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否是文件夹</span></span><br><span class="line">is_dir = os.path.isdir(file_path)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="comment"># 删除文件或文件夹</span></span><br><span class="line">shutil.rmtree(path)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拷贝文件夹</span></span><br><span class="line">shutil.copytree(<span class="string">&quot;要拷贝的&quot;</span>,<span class="string">&quot;拷贝到哪里&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拷贝文件</span></span><br><span class="line">shutil.copy(<span class="string">&quot;要拷贝的&quot;</span>,<span class="string">&quot;拷贝到哪里&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重命名</span></span><br><span class="line">shutil.move(<span class="string">&quot;原文件&quot;</span>,<span class="string">&quot;新文件&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="python发邮件"><a href="#python发邮件" class="headerlink" title="python发邮件"></a>python发邮件</h2><p>注册邮箱</p>
+<p>基础配置：</p>
+<p>​	开启POP3&#x2F;SMTP服务(记住授权码)</p>
+<p>​	SMTP服务器：smtp.163.com</p>
+<p>代码发邮件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import smtplib</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.utils import formataddr</span><br><span class="line"></span><br><span class="line">def sendEmail(receiveEmail):</span><br><span class="line">    # 邮件内容配置</span><br><span class="line">    msg = MIMEText(&quot;内容&quot;,&#x27;html&#x27;,&#x27;utf-8&#x27;)</span><br><span class="line">    msg[&#x27;From&#x27;] = formataddr([&#x27;发件人名称&#x27;,&#x27;发件人邮箱&#x27;])</span><br><span class="line">    msg[&#x27;Subject&#x27;] = &quot;主题&quot;</span><br><span class="line"></span><br><span class="line">    # 发送邮件</span><br><span class="line">    server = smtplib.SMTP_SSL(&quot;smtp.163.com&quot;)</span><br><span class="line">    server.login(&quot;发件人邮箱&quot;,&quot;授权码&quot;)</span><br><span class="line">    server.sendmail(&quot;发件人邮箱&quot;,receiveEmail,msg.as_string())</span><br><span class="line">    server.quit()</span><br><span class="line"></span><br><span class="line">sendEmail(收件人)</span><br></pre></td></tr></table></figure>
+
+<h2 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h2><p>def func(12,9,a3 &#x3D; 90)</p>
+<h2 id="动态参数"><a href="#动态参数" class="headerlink" title="动态参数"></a>动态参数</h2><p>一个*只能按位置传参</p>
+<p>def func(*args):</p>
+<p>​	print(args) # 元组类型</p>
+<p>func(22,33)</p>
+<p>两个**只能按关键字传参</p>
+<p>def func(**kwargs)</p>
+<p>func(n1&#x3D;””,age&#x3D;18)</p>
+<p>同时有*和**传参</p>
+<p>def func(*args,**kwargs)</p>
+<p>func(22,33,99)</p>
+<p>func(n1&#x3D;””,age&#x3D;18)</p>
+<p>func(22,33,99,n1&#x3D;””,age&#x3D;18)</p>
+<h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><p>**必须放在*后面，参数和动态参数混合时，动态参数只能放在最后</p>
+<p>def func(a1,a2,a3,*args,**kwargs)</p>
+<h2 id="函数返回值"><a href="#函数返回值" class="headerlink" title="函数返回值"></a>函数返回值</h2><p>return和return None效果相同</p>
+<h2 id="参数的补充"><a href="#参数的补充" class="headerlink" title="参数的补充"></a>参数的补充</h2><p>内存地址</p>
+<p>v1 &#x3D; “你好”</p>
+<p>addr &#x3D; id(v1)</p>
+<p>函数执行传递的是内存地址</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>函数为作用域：在函数内创建的数据，无法在其他函数中使用</p>
+<p>全局和局部：先找局部再找全局</p>
+<p>global关键字：函数里面使用全局变量必须在函数里面使用时加global关键字，否则相当于新建了一个局部变量</p>
+<h2 id="函数嵌套"><a href="#函数嵌套" class="headerlink" title="函数嵌套"></a>函数嵌套</h2><p>多个函数下面会把上面的覆盖</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>def outer(origin):</p>
+<p>​	def inner(*args,**kwargs):</p>
+<p>​		# 执行前</p>
+<p>​		res &#x3D; origin(*args,**kwargs)</p>
+<p>​		# 执行后</p>
+<p>​		return res</p>
+<p>​	return inner</p>
+<p>@outer</p>
+<p>def func():</p>
+<p>​	pass</p>
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>lambda x:x+100</p>
+<h2 id="三元运算"><a href="#三元运算" class="headerlink" title="三元运算"></a>三元运算</h2><p>res &#x3D; 条件成立时 if 条件 else 不成立时</p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>yield就像return</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">function</span>():</span><br><span class="line">	<span class="built_in">print</span>(<span class="number">123</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="number">456</span>)</span><br><span class="line">	<span class="keyword">yield</span> <span class="number">111</span></span><br><span class="line">	<span class="built_in">print</span>(<span class="number">789</span>)</span><br><span class="line">	<span class="keyword">yield</span> <span class="number">222</span></span><br><span class="line">	<span class="built_in">print</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">res = function()</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">n1 = <span class="built_in">next</span>(res)</span><br><span class="line"><span class="built_in">print</span>(n1)</span><br><span class="line">n2 = <span class="built_in">next</span>(res)</span><br><span class="line"><span class="built_in">print</span>(n2)</span><br></pre></td></tr></table></figure>
+
+<p>用for循环是常用场景</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://www.gll365.top">uglory</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://www.gll365.top/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%911/">http://www.gll365.top/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%911/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.gll365.top" target="_blank">星辰</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python%E5%BC%80%E5%8F%91/">python开发</a></div><div class="post_share"><div class="social-share" data-image="/img/5.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%912/"><img class="prev-cover" src="/img/6.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">待开发</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/28/7%E3%80%81%E9%A1%B9%E7%9B%AE%E7%99%BE%E4%BE%8B5/"><img class="next-cover" src="/img/3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">文件包含/etc/passwd和/etc/shadow</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%912/" title="待开发"><img class="cover" src="/img/6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-28</div><div class="title">待开发</div></div></a></div><div><a href="/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%913/" title="待开发"><img class="cover" src="/img/3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-28</div><div class="title">待开发</div></div></a></div><div><a href="/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%914/" title="待开发"><img class="cover" src="/img/9.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-28</div><div class="title">待开发</div></div></a></div><div><a href="/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%915/" title="待开发"><img class="cover" src="/img/8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-28</div><div class="title">待开发</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">uglory</div><div class="author-info__description">本科 | 软件工程 | 网络安全</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">107</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/uglory-gll"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">一些函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E6%96%87%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text">读文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E6%96%87%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">写文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.3.</span> <span class="toc-text">文件打开模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%8A%9F%E8%83%BD"><span class="toc-number">2.4.</span> <span class="toc-text">常见功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BB%E6%96%87%E4%BB%B6-1"><span class="toc-number">2.4.1.</span> <span class="toc-text">读文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E6%96%87%E4%BB%B6-1"><span class="toc-number">2.4.2.</span> <span class="toc-text">写文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flush%E5%88%B7%E5%88%B0%E7%A1%AC%E7%9B%98"><span class="toc-number">2.4.3.</span> <span class="toc-text">flush刷到硬盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E5%85%89%E6%A0%87%E4%BD%8D%E7%BD%AE"><span class="toc-number">2.4.4.</span> <span class="toc-text">移动光标位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E5%85%89%E6%A0%87%E4%BD%8D%E7%BD%AE"><span class="toc-number">2.4.5.</span> <span class="toc-text">获取当前光标位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#with%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86"><span class="toc-number">2.5.</span> <span class="toc-text">with上下文管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#csv%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">csv格式文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ini%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">ini格式文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xml%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">xml格式文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#excel%E6%96%87%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">excel文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">压缩文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3"><span class="toc-number">8.</span> <span class="toc-text">文件和路径相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">9.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E5%8F%91%E9%82%AE%E4%BB%B6"><span class="toc-number">9.1.</span> <span class="toc-text">python发邮件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="toc-number">9.2.</span> <span class="toc-text">默认参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%8F%82%E6%95%B0"><span class="toc-number">9.3.</span> <span class="toc-text">动态参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E7%BD%AE"><span class="toc-number">9.4.</span> <span class="toc-text">位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">9.5.</span> <span class="toc-text">函数返回值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E7%9A%84%E8%A1%A5%E5%85%85"><span class="toc-number">9.6.</span> <span class="toc-text">参数的补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">9.7.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%B5%8C%E5%A5%97"><span class="toc-number">9.8.</span> <span class="toc-text">函数嵌套</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85"><span class="toc-number">9.9.</span> <span class="toc-text">闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-number">9.10.</span> <span class="toc-text">装饰器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-number">9.11.</span> <span class="toc-text">匿名函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97"><span class="toc-number">9.12.</span> <span class="toc-text">三元运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">9.13.</span> <span class="toc-text">生成器</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C45/" title="CVE-2021-34257"><img src="/img/4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CVE-2021-34257"/></a><div class="content"><a class="title" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C45/" title="CVE-2021-34257">CVE-2021-34257</a><time datetime="2023-10-01T00:03:05.000Z" title="发表于 2023-10-01 08:03:05">2023-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C44/" title="CVE-2021-40280"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CVE-2021-40280"/></a><div class="content"><a class="title" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C44/" title="CVE-2021-40280">CVE-2021-40280</a><time datetime="2023-10-01T00:03:00.000Z" title="发表于 2023-10-01 08:03:00">2023-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C43/" title="CVE-2021-40282"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CVE-2021-40282"/></a><div class="content"><a class="title" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C43/" title="CVE-2021-40282">CVE-2021-40282</a><time datetime="2023-10-01T00:02:54.000Z" title="发表于 2023-10-01 08:02:54">2023-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C42/" title="CVE-2021-41402"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CVE-2021-41402"/></a><div class="content"><a class="title" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C42/" title="CVE-2021-41402">CVE-2021-41402</a><time datetime="2023-10-01T00:02:48.000Z" title="发表于 2023-10-01 08:02:48">2023-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C41/" title="CVE-2021-41773"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CVE-2021-41773"/></a><div class="content"><a class="title" href="/2023/10/01/5%E3%80%81%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C41/" title="CVE-2021-41773">CVE-2021-41773</a><time datetime="2023-10-01T00:02:42.000Z" title="发表于 2023-10-01 08:02:42">2023-10-01</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/5.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By uglory</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'PmQ3qRsdTP1lhvsnkUSqTL8w-MdYXbMMI',
+      appKey: '6AQTRJFOclrwPAqxSFQUjlWe',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://www.gll365.top/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%911/'
+    this.page.identifier = '/2023/07/28/8%E3%80%81python%E5%BC%80%E5%8F%911/'
+    this.page.title = '函数和模块'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+
+  document.getElementById('darkmode').addEventListener('click', () => {
+    setTimeout(() => window.disqusReset(), 200)
+  })
+}
+
+if ('Valine' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><div class="aplayer no-destroy" data-id="7770163723" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
